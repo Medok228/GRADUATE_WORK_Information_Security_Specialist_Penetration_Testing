@@ -1,0 +1,1762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Отчет о сканировании ZAP </title>
+<link
+	href="2024-05-20-ZAP-Report-/normalize/normalize.css" rel="stylesheet">
+<link
+	href="2024-05-20-ZAP-Report-/themes/original/main.css" rel="stylesheet">
+<link
+	href="2024-05-20-ZAP-Report-/themes/original/colors.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1>Отчет о сканировании ZAP </h1>
+		<p>
+			<span>Generated with</span> <a href="https://zaproxy.org"><img
+				src="2024-05-20-ZAP-Report-/zap32x32.png" alt="The ZAP logo" class="zap-logo">ZAP</a>
+			<span>on пн 20 мая 2024, at 17:35:51</span>
+		</p>
+		<p>ZAP Version: 2.14.0</p>
+		<p>
+			ZAP is supported by the <a href="https://crashoverride.com/?zap=rep">Crash Override Open Source Fellowship</a>
+		</p>
+	</header>
+
+	<main>
+
+		<section id="contents" class="contents">
+			<h2>Contents</h2>
+			<nav>
+				<ol>
+					<li><a
+						href="#about-this-report">About this report</a>
+						<ol>
+							
+							<li><a
+								href="#report-parameters">Report parameters</a></li>
+						</ol></li>
+					<data-th-block>
+					<li><a
+						href="#summaries">Summaries</a>
+						<ol>
+							<li><a
+								href="#risk-confidence-counts">Alert counts by risk and confidence</a></li>
+							<li><a
+								href="#site-risk-counts">Alert counts by site and risk</a></li>
+							<li><a
+								href="#alert-type-counts">Alert counts by alert type</a></li>
+						</ol></li>
+					<li><a
+						href="#alerts">Alerts</a>
+						<ol>
+							
+							
+							
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-3-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Высокий</span>, <span>Confidence</span>=<span
+									class="confidence-level">Средний</span> <span>(4)</span></a></li>
+							
+							
+							  
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-2-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Средний</span>, <span>Confidence</span>=<span
+									class="confidence-level">Высокий</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-2-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Средний</span>, <span>Confidence</span>=<span
+									class="confidence-level">Средний</span> <span>(2)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-2-confidence-1"><span>Risk</span>=<span
+									class="risk-level">Средний</span>, <span>Confidence</span>=<span
+									class="confidence-level">Низкий</span> <span>(1)</span></a></li>
+							  
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-1-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Низкий</span>, <span>Confidence</span>=<span
+									class="confidence-level">Высокий</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-1-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Низкий</span>, <span>Confidence</span>=<span
+									class="confidence-level">Средний</span> <span>(2)</span></a></li>
+							
+							
+							  
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-0-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Информационный</span>, <span>Confidence</span>=<span
+									class="confidence-level">Высокий</span> <span>(2)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-0-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Информационный</span>, <span>Confidence</span>=<span
+									class="confidence-level">Средний</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-0-confidence-1"><span>Risk</span>=<span
+									class="risk-level">Информационный</span>, <span>Confidence</span>=<span
+									class="confidence-level">Низкий</span> <span>(2)</span></a></li>
+							  
+						</ol></li>
+					<li><a
+						href="#appendix">Appendix</a>
+						<ol>
+							<li><a
+								href="#alert-types">Alert types</a></li>
+						</ol></li>
+					</data-th-block>
+				</ol>
+			</nav>
+		</section>
+
+		<section
+			id="about-this-report" class="about-this-report">
+			<h2>About this report</h2>
+
+			
+
+			<section
+				id="report-parameters">
+				<h3>Report parameters</h3>
+				<div class="report-parameters--container">
+					<h4>Contexts</h4>
+					
+					
+					<p>No contexts were selected, so all contexts were included by default.</p>
+					  
+
+					<h4>Sites</h4>
+					
+					<p>The following sites were included:</p>
+					<ul class="sites-list">
+						<li><span class="site">http://92.51.39.106:7799</span></li>
+					</ul>
+					
+					<p>(If no sites were selected, all sites were included by default.)</p>
+					<p>An included site must also be within one of the included contexts for its data to be included in the report.</p>
+
+					<h4>Risk levels</h4>
+					<p>
+						<span>Included</span>:
+						 
+						<span class="included-risk-codes"><span class="risk-level">Высокий</span>, <span class="risk-level">Средний</span>, <span class="risk-level">Низкий</span>, <span class="risk-level">Информационный</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						 <span>None</span>
+						
+					</p>
+
+					<h4>Confidence levels</h4>
+					<p>
+						<span>Included</span>:
+						
+						
+						<span class="included-confidence-codes"><span class="confidence-level">Пользователь подтвержден </span>, <span class="confidence-level">Высокий</span>, <span class="confidence-level">Средний</span>, <span class="confidence-level">Низкий</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						
+						
+						<span class="included-confidence-codes"> <span class="confidence-level">Пользователь подтвержден </span>, <span class="confidence-level">Высокий</span>, <span class="confidence-level">Средний</span>, <span class="confidence-level">Низкий</span>, <span class="confidence-level">Ложно-положительное</span></span>
+					</p>
+				</div>
+			</section>
+		</section>
+
+		
+		<section>
+			
+		</section>
+		
+		<section id="summaries" class="summaries">
+			<h2>Summaries</h2>
+
+			<section
+				id="risk-confidence-counts">
+				<h3>Alert counts by risk and confidence</h3>
+				<table class="risk-confidence-counts-table">
+					<caption>
+						<p>This table shows the number of alerts for each level of risk and confidence included in the report.</p>
+						<p>(The percentages in brackets represent the count as a percentage of the total number of alerts included in the report, rounded to one decimal place.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col
+							style="width: 14.0%"><col
+							style="width: 14.0%"><col
+							style="width: 14.0%"><col
+							style="width: 14.0%">
+						<col style="width: 14.0%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup"
+								colspan="5">Confidence</th>
+						</tr>
+						<tr>
+							<th scope="col">Пользователь подтвержден </th>
+							<th scope="col">Высокий</th>
+							<th scope="col">Средний</th>
+							<th scope="col">Низкий</th>
+							<th scope="col">Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup"
+								rowspan="5">Risk</th>
+							<th scope="row">Высокий</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0 %)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0 %)</span></td>
+							<td><span>4</span><br> <span
+								class="additional-info-percentages">(25,0 %)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0 %)</span></td>
+							<td><span>4</span><br> <span class="additional-info-percentages">(25,0 %)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Средний</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0 %)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(6,2 %)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(12,5 %)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(6,2 %)</span></td>
+							<td><span>4</span><br> <span class="additional-info-percentages">(25,0 %)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Низкий</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0 %)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(6,2 %)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(12,5 %)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0 %)</span></td>
+							<td><span>3</span><br> <span class="additional-info-percentages">(18,8 %)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Информационный</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0 %)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(12,5 %)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(6,2 %)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(12,5 %)</span></td>
+							<td><span>5</span><br> <span class="additional-info-percentages">(31,2 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row">Total</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0 %)</span></td>
+							<td><span>4</span><br> <span
+								class="additional-info-percentages">(25,0 %)</span></td>
+							<td><span>9</span><br> <span
+								class="additional-info-percentages">(56,2 %)</span></td>
+							<td><span>3</span><br> <span
+								class="additional-info-percentages">(18,8 %)</span></td>
+							<td><span>16</span><br> <span
+								class="additional-info-percentages">(100%)</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section
+				id="site-risk-counts">
+				<h3>Alert counts by site and risk</h3>
+				<table class="site-risk-counts-table">
+					<caption>
+						<p>This table shows, for each site for which one or more alerts were raised, the number of alerts raised at each risk level.</p>
+						<p>Alerts with a confidence level of &quot;False Positive&quot; have been excluded from these counts.</p>
+						<p>(The numbers in brackets are the number of alerts raised for the site at or above that risk level.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col
+							style="width: 16.25%"><col
+							style="width: 16.25%"><col
+							style="width: 16.25%"><col
+							style="width: 16.25%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup" colspan="4">Risk</th>
+						</tr>
+						<tr>
+							<th scope="col">
+								<span>Высокий</span><br>  <span
+									class="additional-info-percentages">(= Высокий)</span>  
+							</th>
+							<th scope="col">
+								<span>Средний</span><br>   <span
+									class="additional-info-percentages">(&gt;= Средний)</span> 
+							</th>
+							<th scope="col">
+								<span>Низкий</span><br>   <span
+									class="additional-info-percentages">(&gt;= Низкий)</span> 
+							</th>
+							<th scope="col">
+								<span>Информационный</span><br>   <span
+									class="additional-info-percentages">(&gt;= Информационный)</span> 
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup"
+								rowspan="1">Site</th>
+							<th scope="row">http://92.51.39.106:7799</th>
+							
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(1)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(1)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(1)</span></td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section
+				id="alert-type-counts">
+				<h3>Alert counts by alert type</h3>
+				<table class="alert-type-counts-table">
+					<caption>
+						<p>This table shows the number of alerts of each alert type, together with the alert type&#39;s risk level.</p>
+						<p>(The percentages in brackets represent each count as a percentage, rounded to one decimal place, of the total number of alerts included in this report.)</p>
+					</caption>
+					<thead>
+						<tr>
+							<th scope="col">Alert type</th>
+							<th scope="col">Risk</th>
+							<th scope="col">Count</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-0">SQL-инъекция - SQLite</a></th>
+							<td class="risk-level">Высокий</td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(12,5 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-1">Внедрение удаленных команд ОС</a></th>
+							<td class="risk-level">Высокий</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(6,2 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-2">Межсайтовый скриптинг (отражение) </a></th>
+							<td class="risk-level">Высокий</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(6,2 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-3">Обход Пути </a></th>
+							<td class="risk-level">Высокий</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(6,2 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-4">Заголовок Content Security Policy (CSP) не задан</a></th>
+							<td class="risk-level">Средний</td>
+							<td><span>11</span><br> <span
+								class="additional-info-percentages">(68,8 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-5">Отсутствует заголовок (Header) для защиты от кликджекинга </a></th>
+							<td class="risk-level">Средний</td>
+							<td><span>11</span><br> <span
+								class="additional-info-percentages">(68,8 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-6">Отсутствуют токены против CSRF атак</a></th>
+							<td class="risk-level">Средний</td>
+							<td><span>17</span><br> <span
+								class="additional-info-percentages">(106,2 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-7">Уязвимость JS Библиотеки (Library)</a></th>
+							<td class="risk-level">Средний</td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(12,5 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-8">Заголовок X-Content-Type-Options отсутствует </a></th>
+							<td class="risk-level">Низкий</td>
+							<td><span>48</span><br> <span
+								class="additional-info-percentages">(300,0 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-9">Раскрытие ошибок приложения </a></th>
+							<td class="risk-level">Низкий</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(6,2 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-10">Сервер утечка информации о версии через поле заголовка HTTP-ответа «Server» </a></th>
+							<td class="risk-level">Низкий</td>
+							<td><span>56</span><br> <span
+								class="additional-info-percentages">(350,0 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-11">Authentication Request Identified</a></th>
+							<td class="risk-level">Информационный</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(6,2 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-12">GET для POST</a></th>
+							<td class="risk-level">Информационный</td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(12,5 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-13">Атрибут элемента HTML, управляемый пользователем (потенциальный XSS) </a></th>
+							<td class="risk-level">Информационный</td>
+							<td><span>14</span><br> <span
+								class="additional-info-percentages">(87,5 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-14">Раскрытие информации - подозрительные комментарии </a></th>
+							<td class="risk-level">Информационный</td>
+							<td><span>7</span><br> <span
+								class="additional-info-percentages">(43,8 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-15">Современное веб-приложение </a></th>
+							<td class="risk-level">Информационный</td>
+							<td><span>11</span><br> <span
+								class="additional-info-percentages">(68,8 %)</span></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th scope="row">Total</th>
+							<td></td>
+							<td>16</td>
+						</tr>
+					</tfoot>
+				</table>
+			</section>
+		</section>
+
+		<section id="alerts" class="alerts">
+			<h2>Alerts</h2>
+			<ol>
+				
+				 
+				
+				
+				
+				
+				<li id="alerts--risk-3-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Высокий</span>, <span>Confidence</span>=<span
+							class="confidence-level">Средний</span> <span>(4)</span>
+					</h3>
+					<ol>
+						
+						
+						
+					</ol>
+				</li>
+				
+				
+				  
+				 
+				
+				
+				<li id="alerts--risk-2-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Средний</span>, <span>Confidence</span>=<span
+							class="confidence-level">Высокий</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-2-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Средний</span>, <span>Confidence</span>=<span
+							class="confidence-level">Средний</span> <span>(2)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://92.51.39.106:7799</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-5">Отсутствует заголовок (Header) для защиты от кликджекинга </a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://92.51.39.106:7799</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/11-Client-side_Testing/09-Testing_for_Clickjacking">WSTG-v42-CLNT-09</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Ответ не включает Content-Security-Policy с директивой «frame-ancestors» или X-Frame-Options для защиты от атак «ClickJacking».</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (248 bytes)</summary>
+				
+				<pre><code>GET http://92.51.39.106:7799 HTTP/1.1
+host: 92.51.39.106:7799
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 OPR/102.0.0.0
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (198 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Mon, 20 May 2024 13:42:52 GMT
+Content-Length: 15053
+Etag: &quot;7d0e9a50883c08ba3e168c67542d69836d3342e1&quot;
+Content-Type: text/html; charset=UTF-8
+Server: TornadoServer/5.1.1
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (15053 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;!--[if lt IE 7 ]&gt;&lt;html class=&quot;ie ie6&quot; lang=&quot;en&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 7 ]&gt;&lt;html class=&quot;ie ie7&quot; lang=&quot;en&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 8 ]&gt;&lt;html class=&quot;ie ie8&quot; lang=&quot;en&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if (gte IE 9)|!(IE)]&gt;&lt;!--&gt;&lt;html lang=&quot;en&quot;&gt; &lt;!--&lt;![endif]--&gt;
+&lt;head&gt;
+&lt;!-- Basic Page Needs
+================================================== --&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Beemer&lt;/title&gt;
+&lt;meta name=&quot;description&quot; content=&quot;Free Responsive Html5 Css3 Templates | zerotheme.com&quot;&gt;
+&lt;meta name=&quot;author&quot; content=&quot;www.zerotheme.com&quot;&gt;
+&lt;!-- Mobile Specific Metas
+================================================== --&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1&quot;&gt;
+&lt;!-- CSS
+================================================== --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/static/css/zerogrid.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/static/css/style.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/static/css/lightbox.css&quot;&gt;
+&lt;!-- Custom Fonts --&gt;
+&lt;link href=&quot;/static/font-awesome/css/font-awesome.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/static/css/menu.css&quot;&gt;
+&lt;script src=&quot;/static/js/jquery1111.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/static/js/script.js&quot;&gt;&lt;/script&gt;
+&lt;!-- Owl Carousel Assets --&gt;
+&lt;link href=&quot;/static/owl-carousel/owl.carousel.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;!-- &lt;link href=&quot;/static/owl-carousel/owl.theme.css&quot; rel=&quot;stylesheet&quot;&gt; --&gt;
+&lt;!--[if lt IE 8]&gt;
+&lt;div style=&#39; clear: both; text-align:center; position: relative;&#39;&gt;
+&lt;a href=&quot;http://windows.microsoft.com/en-US/internet-explorer/Items/ie/home?ocid=ie6_countdown_bannercode&quot;&gt;
+&lt;img src=&quot;http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg&quot; border=&quot;0&quot; height=&quot;42&quot; width=&quot;820&quot; alt=&quot;You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today.&quot; /&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;![endif]--&gt;
+&lt;!--[if lt IE 9]&gt;
+&lt;script src=&quot;/static/js/html5.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/static/js/css3-mediaqueries.js&quot;&gt;&lt;/script&gt;
+&lt;![endif]--&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;wrap-body&quot;&gt;
+&lt;div class=&quot;header&quot;&gt;
+&lt;div id=&#39;cssmenu&#39; class=&quot;align-right&quot;&gt;
+&lt;ul&gt;
+&lt;li class=&quot;active&quot;&gt;&lt;a href=&#39;index.html&#39;&gt;&lt;span&gt;M Power&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#39;server.html&#39;&gt;&lt;span&gt;Server Status&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#39;last&#39;&gt;&lt;a href=&#39;login.html&#39;&gt;&lt;span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--////////////////////////////////////Container--&gt;
+&lt;section id=&quot;container&quot;&gt;
+&lt;div class=&quot;wrap-container&quot;&gt;
+&lt;section class=&quot;content-box box-1&quot;&gt;
+&lt;div class=&quot;zerogrid&quot;&gt;
+&lt;div class=&quot;wrap-box&quot;&gt;&lt;!--Start Box--&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;&quot;&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-1-2&quot;&gt;
+&lt;a href=&quot;index.html&quot;&gt;&lt;img src=&quot;/static/images/logo.png&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-1-2&quot;&gt;
+&lt;form id=&quot;form-container&quot; action=&quot;/search&quot; class=&quot;f-right&quot;&gt;
+&lt;!--&lt;input type=&quot;submit&quot; id=&quot;searchsubmit&quot; value=&quot;&quot; /&gt;--&gt;
+&lt;a class=&quot;search-submit-button&quot; href=&quot;javascript:void(0)&quot;&gt;
+&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;div id=&quot;searchtext&quot;&gt;
+&lt;input type=&quot;text&quot; id=&quot;s&quot; name=&quot;q&quot; placeholder=&quot;Search Something...&quot;&gt;
+&lt;/div&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;owl-slide&quot; class=&quot;owl-carousel&quot;&gt;
+&lt;div class=&quot;item&quot;&gt;
+&lt;img src=&quot;/static/images/slider-1.jpg&quot; /&gt;
+&lt;/div&gt;
+&lt;div class=&quot;item&quot;&gt;
+&lt;img src=&quot;/static/images/slider-2.jpg&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;h1&gt;Upload Car Wallpaper&lt;/h2&gt;
+&lt;form enctype=&quot;multipart/form-data&quot; action=&quot;/upload&quot; method=&quot;post&quot;&gt;
+File: &lt;input type=&quot;file&quot; name=&quot;file1&quot; /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;input type=&quot;submit&quot; value=&quot;upload&quot; /&gt;
+&lt;/form&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/read?file=car&quot;&gt;History of Cars&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/read?file=cycle&quot;&gt;History of Cycles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/read?file=bike&quot;&gt;History of Bike&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-----------------content-box-2--------------------&gt;
+&lt;section class=&quot;content-box box-2&quot;&gt;
+&lt;div class=&quot;zerogrid&quot;&gt;
+&lt;div class=&quot;wrap-box&quot;&gt;&lt;!--Start Box--&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-1-4&quot;&gt;
+&lt;div class=&quot;wrapper&quot;&gt;
+&lt;div class=&quot;portfolio-box&quot;&gt;
+&lt;img src=&quot;/static/images/img_5-370x370.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;&quot;&gt;
+&lt;div class=&quot;portfolio-box-caption&quot;&gt;
+&lt;div class=&quot;portfolio-box-caption-content&quot;&gt;
+&lt;div class=&quot;project-category text-faded&quot;&gt;
+Category
+&lt;/div&gt;
+&lt;div class=&quot;project-name&quot;&gt;
+Project Name
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-1-4&quot;&gt;
+&lt;div class=&quot;wrapper&quot;&gt;
+&lt;div class=&quot;portfolio-box&quot;&gt;
+&lt;img src=&quot;/static/images/img_6-370x370.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;&quot;&gt;
+&lt;div class=&quot;portfolio-box-caption&quot;&gt;
+&lt;div class=&quot;portfolio-box-caption-content&quot;&gt;
+&lt;div class=&quot;project-category text-faded&quot;&gt;
+Category
+&lt;/div&gt;
+&lt;div class=&quot;project-name&quot;&gt;
+Project Name
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-1-4&quot;&gt;
+&lt;div class=&quot;wrapper&quot;&gt;
+&lt;div class=&quot;portfolio-box&quot;&gt;
+&lt;img src=&quot;/static/images/img_7-370x370.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;&quot;&gt;
+&lt;div class=&quot;portfolio-box-caption&quot;&gt;
+&lt;div class=&quot;portfolio-box-caption-content&quot;&gt;
+&lt;div class=&quot;project-category text-faded&quot;&gt;
+Category
+&lt;/div&gt;
+&lt;div class=&quot;project-name&quot;&gt;
+Project Name
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-1-4&quot;&gt;
+&lt;div class=&quot;wrapper&quot;&gt;
+&lt;div class=&quot;portfolio-box&quot;&gt;
+&lt;img src=&quot;/static/images/img_8-370x370.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;&quot;&gt;
+&lt;div class=&quot;portfolio-box-caption&quot;&gt;
+&lt;div class=&quot;portfolio-box-caption-content&quot;&gt;
+&lt;div class=&quot;project-category text-faded&quot;&gt;
+Category
+&lt;/div&gt;
+&lt;div class=&quot;project-name&quot;&gt;
+Project Name
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-1-4&quot;&gt;
+&lt;div class=&quot;wrapper&quot;&gt;
+&lt;div class=&quot;portfolio-box&quot;&gt;
+&lt;img src=&quot;/static/images/img_9-370x370.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;&quot;&gt;
+&lt;div class=&quot;portfolio-box-caption&quot;&gt;
+&lt;div class=&quot;portfolio-box-caption-content&quot;&gt;
+&lt;div class=&quot;project-category text-faded&quot;&gt;
+Category
+&lt;/div&gt;
+&lt;div class=&quot;project-name&quot;&gt;
+Project Name
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-1-4&quot;&gt;
+&lt;div class=&quot;wrapper&quot;&gt;
+&lt;div class=&quot;portfolio-box&quot;&gt;
+&lt;img src=&quot;/static/images/img_10-370x370.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;&quot;&gt;
+&lt;div class=&quot;portfolio-box-caption&quot;&gt;
+&lt;div class=&quot;portfolio-box-caption-content&quot;&gt;
+&lt;div class=&quot;project-category text-faded&quot;&gt;
+Category
+&lt;/div&gt;
+&lt;div class=&quot;project-name&quot;&gt;
+Project Name
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-1-4&quot;&gt;
+&lt;div class=&quot;wrapper&quot;&gt;
+&lt;div class=&quot;portfolio-box&quot;&gt;
+&lt;img src=&quot;/static/images/img_18-370x370.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;&quot;&gt;
+&lt;div class=&quot;portfolio-box-caption&quot;&gt;
+&lt;div class=&quot;portfolio-box-caption-content&quot;&gt;
+&lt;div class=&quot;project-category text-faded&quot;&gt;
+Category
+&lt;/div&gt;
+&lt;div class=&quot;project-name&quot;&gt;
+Project Name
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-1-4&quot;&gt;
+&lt;div class=&quot;wrapper&quot;&gt;
+&lt;div class=&quot;portfolio-box&quot;&gt;
+&lt;img src=&quot;/static/images/img_19-370x370.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;&quot;&gt;
+&lt;div class=&quot;portfolio-box-caption&quot;&gt;
+&lt;div class=&quot;portfolio-box-caption-content&quot;&gt;
+&lt;div class=&quot;project-category text-faded&quot;&gt;
+Category
+&lt;/div&gt;
+&lt;div class=&quot;project-name&quot;&gt;
+Project Name
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;!-----------------content-box-3--------------------&gt;
+&lt;section class=&quot;content-box boxstyle-1 box-3&quot;&gt;
+&lt;div class=&quot;zerogrid&quot;&gt;
+&lt;div class=&quot;row wrap-box&quot;&gt;&lt;!--Start Box--&gt;
+&lt;div class=&quot;header t-center&quot;&gt;
+&lt;div class=&quot;wrapper&quot;&gt;
+&lt;h2 class=&quot;color-yellow&quot;&gt;FULL SERVICE CATERING, SERVICE STAFF, RENTALS, FLORAL DESIGN&lt;/h2&gt;
+&lt;span&gt;Nulla ipsum dolor lacus, suscipit adipiscing. Cum sociis natoque penatibus et ultrices volutpat&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-1-4&quot;&gt;
+&lt;div class=&quot;wrap-col post&quot;&gt;
+&lt;div class=&quot;item-container&quot;&gt;
+&lt;div class=&quot;item-caption&quot;&gt;
+&lt;div class=&quot;item-caption-inner&quot;&gt;
+&lt;div class=&quot;item-caption-inner1&quot;&gt;
+&lt;a class=&quot;example-image-link&quot; href=&quot;/static/images/portfolio-1.jpg&quot; data-lightbox=&quot;example-set&quot; data-title=&quot;Click the right half of the image to move forward.&quot;&gt;
+&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;img src=&quot;/static/images/portfolio-1-thumb.jpg&quot; alt=&quot;&quot;/&gt;
+&lt;/div&gt;
+&lt;h3&gt;Banquet&lt;/h3&gt;
+&lt;p&gt;His primis omittam ...&lt;/p&gt;
+&lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;Learn More&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-1-4&quot;&gt;
+&lt;div class=&quot;wrap-col post&quot;&gt;
+&lt;div class=&quot;item-container&quot;&gt;
+&lt;div class=&quot;item-caption&quot;&gt;
+&lt;div class=&quot;item-caption-inner&quot;&gt;
+&lt;div class=&quot;item-caption-inner1&quot;&gt;
+&lt;a class=&quot;example-image-link&quot; href=&quot;/static/images/portfolio-2.jpg&quot; data-lightbox=&quot;example-set&quot; data-title=&quot;Click the right half of the image to move forward.&quot;&gt;
+&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;img src=&quot;/static/images/portfolio-2-thumb.jpg&quot; alt=&quot;&quot;/&gt;
+&lt;/div&gt;
+&lt;h3&gt;Banquet&lt;/h3&gt;
+&lt;p&gt;His primis omittam ...&lt;/p&gt;
+&lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;Learn More&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-1-4&quot;&gt;
+&lt;div class=&quot;wrap-col post&quot;&gt;
+&lt;div class=&quot;item-container&quot;&gt;
+&lt;div class=&quot;item-caption&quot;&gt;
+&lt;div class=&quot;item-caption-inner&quot;&gt;
+&lt;div class=&quot;item-caption-inner1&quot;&gt;
+&lt;a class=&quot;example-image-link&quot; href=&quot;/static/images/portfolio-3.jpg&quot; data-lightbox=&quot;example-set&quot; data-title=&quot;Click the right half of the image to move forward.&quot;&gt;
+&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;img src=&quot;/static/images/portfolio-3-thumb.jpg&quot; alt=&quot;&quot;/&gt;
+&lt;/div&gt;
+&lt;h3&gt;Banquet&lt;/h3&gt;
+&lt;p&gt;His primis omittam ...&lt;/p&gt;
+&lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;Learn More&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-1-4&quot;&gt;
+&lt;div class=&quot;wrap-col post&quot;&gt;
+&lt;div class=&quot;item-container&quot;&gt;
+&lt;div class=&quot;item-caption&quot;&gt;
+&lt;div class=&quot;item-caption-inner&quot;&gt;
+&lt;div class=&quot;item-caption-inner1&quot;&gt;
+&lt;a class=&quot;example-image-link&quot; href=&quot;/static/images/portfolio-4.jpg&quot; data-lightbox=&quot;example-set&quot; data-title=&quot;Click the right half of the image to move forward.&quot;&gt;
+&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;img src=&quot;/static/images/portfolio-4-thumb.jpg&quot; alt=&quot;&quot;/&gt;
+&lt;/div&gt;
+&lt;h3&gt;Banquet&lt;/h3&gt;
+&lt;p&gt;His primis omittam ...&lt;/p&gt;
+&lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;Learn More&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;!-----------------content-box-5--------------------&gt;
+&lt;section class=&quot;content-box boxstyle-1 box-5&quot;&gt;
+&lt;div class=&quot;zerogrid&quot;&gt;
+&lt;div class=&quot;row wrap-box&quot;&gt;&lt;!--Start Box--&gt;
+&lt;div class=&quot;col-2-3&quot;&gt;
+&lt;div class=&quot;header&quot;&gt;
+&lt;div class=&quot;wrapper&quot;&gt;
+&lt;h2 class=&quot;color-yellow&quot;&gt;LATEST FROM THE BLOG&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;article&gt;
+&lt;div class=&quot;art-header&quot;&gt;
+&lt;a href=&quot;#&quot;&gt;&lt;h3&gt;In pede mi, aliquet sit amet, euismod in,auctor ut, ligul.&lt;/h3&gt;&lt;/a&gt;
+&lt;div class=&quot;info&quot;&gt;Posted on June 22, 2010 in: &lt;a href=&quot;#&quot;&gt;Event&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;art-content&quot;&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum. Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;
+&lt;/div&gt;
+&lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;Learn More&lt;/a&gt;
+&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;
+&lt;/article&gt;
+&lt;article&gt;
+&lt;div class=&quot;art-header&quot;&gt;
+&lt;a href=&quot;#&quot;&gt;&lt;h3&gt;In pede mi, aliquet sit amet, euismod in,auctor ut, ligul.&lt;/h3&gt;&lt;/a&gt;
+&lt;div class=&quot;info&quot;&gt;Posted on June 22, 2010 in: &lt;a href=&quot;#&quot;&gt;Event&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;art-content&quot;&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum. Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;
+&lt;/div&gt;
+&lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;Learn More&lt;/a&gt;
+&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;
+&lt;/article&gt;
+&lt;article&gt;
+&lt;div class=&quot;art-header&quot;&gt;
+&lt;a href=&quot;#&quot;&gt;&lt;h3&gt;In pede mi, aliquet sit amet, euismod in,auctor ut, ligul.&lt;/h3&gt;&lt;/a&gt;
+&lt;div class=&quot;info&quot;&gt;Posted on June 22, 2010 in: &lt;a href=&quot;#&quot;&gt;Event&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;art-content&quot;&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum. Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;
+&lt;/div&gt;
+&lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;Learn More&lt;/a&gt;
+&lt;/article&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-1-3&quot;&gt;
+&lt;div class=&quot;r-slidebar&quot;&gt;
+&lt;div class=&quot;wrap-col&quot;&gt;
+&lt;div class=&quot;post&quot;&gt;
+&lt;h5 class=&quot;color-red&quot;&gt;LATEST COMMENTS&lt;/h5&gt;
+&lt;a href=&quot;#&quot;&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing eli...&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;Nastsea labore et dolore magames niausy aliquam quaerat voluptatem.&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing eli...&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing eli...&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;post&quot;&gt;
+&lt;h5 class=&quot;color-blue&quot;&gt;FEES &amp; HOURS&lt;/h5&gt;
+&lt;p&gt;Nastsea labore et dolore magames niausy aliquam quaerat voluptatem.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;post&quot;&gt;
+&lt;h5 class=&quot;color-yellow&quot;&gt;ENROLLING YOUR CHILD&lt;/h5&gt;
+&lt;p&gt;Nastsea labore et dolore magames niausy aliquam quaerat voluptatem.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;post&quot;&gt;
+&lt;h5 class=&quot;color-green&quot;&gt;INFO FOR PARENTS&lt;/h5&gt;
+&lt;p&gt;Nastsea labore et dolore magames niausy aliquam quaerat voluptatem.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;!--////////////////////////////////////Footer--&gt;
+&lt;footer&gt;
+&lt;div class=&quot;wrap-footer&quot;&gt;
+&lt;div class=&quot;zerogrid&quot;&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-1-3&quot;&gt;
+&lt;div class=&quot;wrap-col&quot;&gt;
+&lt;p&gt;Copyright - &lt;a href=&quot;http://www.zerotheme.com&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Free Html5 Templates&lt;/a&gt; designed by ZEROTHEME&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-1-3&quot;&gt;
+&lt;div class=&quot;wrap-col&quot;&gt;
+&lt;ul class=&quot;social-buttons&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-linkedin&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-1-3&quot;&gt;
+&lt;div class=&quot;wrap-col&quot;&gt;
+&lt;ul class=&quot;quick-link&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Terms of Use&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/footer&gt;
+&lt;script src=&quot;/static/js/lightbox-plus-jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;!-- carousel --&gt;
+&lt;script src=&quot;/static/owl-carousel/owl.carousel.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function() {
+$(&quot;#owl-slide&quot;).owlCarousel({
+autoPlay: 3000,
+items : 1,
+itemsDesktop : [1199,1],
+itemsDesktopSmall : [979,1],
+itemsTablet : [768, 1],
+itemsMobile : [479, 1],
+navigation: true,
+navigationText: [&#39;&lt;i class=&quot;fa fa-chevron-left fa-5x&quot;&gt;&lt;/i&gt;&#39;, &#39;&lt;i class=&quot;fa fa-chevron-right fa-5x&quot;&gt;&lt;/i&gt;&#39;],
+pagination: false
+});
+});
+&lt;/script&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>x-frame-options</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Современные веб-браузеры поддерживают Content-Security-Policy и заголовки HTTP X-Frame-Options.Убедитесь, что один из них установлен на всех веб-страницах, возвращаемых вашим сайтом/приложением.Если вы ожидаете, что страница будет обрамлена только страницами на вашем сервере (например, это часть FRAMESET), вам следует использовать SAMEORIGIN, в противном случае, если вы никогда не ожидаете, что страница будет обрамлена, вам следует использовать DENY.В качестве альтернативы рассмотрите возможность реализации директивы Content Security Policy «frame-ancestors».</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-2-confidence-1">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Средний</span>, <span>Confidence</span>=<span
+							class="confidence-level">Низкий</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						
+						
+					</ol>
+				</li>
+				  
+				 
+				
+				
+				<li id="alerts--risk-1-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Низкий</span>, <span>Confidence</span>=<span
+							class="confidence-level">Высокий</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-1-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Низкий</span>, <span>Confidence</span>=<span
+							class="confidence-level">Средний</span> <span>(2)</span>
+					</h3>
+					<ol>
+						
+						
+						
+					</ol>
+				</li>
+				
+				
+				  
+				 
+				
+				
+				<li id="alerts--risk-0-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Информационный</span>, <span>Confidence</span>=<span
+							class="confidence-level">Высокий</span> <span>(2)</span>
+					</h3>
+					<ol>
+						
+						
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-0-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Информационный</span>, <span>Confidence</span>=<span
+							class="confidence-level">Средний</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-0-confidence-1">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Информационный</span>, <span>Confidence</span>=<span
+							class="confidence-level">Низкий</span> <span>(2)</span>
+					</h3>
+					<ol>
+						
+						
+						
+					</ol>
+				</li>
+				  
+			</ol>
+		</section>
+
+		<section id="appendix" class="appendix">
+			<h2>Appendix</h2>
+
+			<section id="alert-types" class="alert-types">
+				<h3>Alert types</h3>
+				<p class="alert-types-intro">This section contains additional information on the types of alerts in the report.</p>
+				<ol>
+					<li
+						id="alert-type-0">
+						<h4>SQL-инъекция - SQLite</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by an active scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/40018/">SQL-инъекция</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/89.html">89</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>19</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-1">
+						<h4>Внедрение удаленных команд ОС</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by an active scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/90020/">Внедрение удаленных команд ОС</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/78.html">78</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>31</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://cwe.mitre.org/data/definitions/78.html">http://cwe.mitre.org/data/definitions/78.html</a></li>
+										<li><a
+											href="https://owasp.org/www-community/attacks/Command_Injection">https://owasp.org/www-community/attacks/Command_Injection</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-2">
+						<h4>Межсайтовый скриптинг (отражение) </h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by an active scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/40012/">Межсайтовый скриптинг (отражение) </a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/79.html">79</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>8</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://projects.webappsec.org/Cross-Site-Scripting">http://projects.webappsec.org/Cross-Site-Scripting</a></li>
+										<li><a
+											href="https://cwe.mitre.org/data/definitions/79.html">https://cwe.mitre.org/data/definitions/79.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-3">
+						<h4>Обход Пути </h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by an active scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/6/">Обход Пути </a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/22.html">22</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>33</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://projects.webappsec.org/Path-Traversal">http://projects.webappsec.org/Path-Traversal</a></li>
+										<li><a
+											href="https://cwe.mitre.org/data/definitions/22.html">https://cwe.mitre.org/data/definitions/22.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-4">
+						<h4>Заголовок Content Security Policy (CSP) не задан</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10038/">Заголовок Content Security Policy (CSP) не задан</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy">https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</a></li>
+										<li><a
+											href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</a></li>
+										<li><a
+											href="http://www.w3.org/TR/CSP/">http://www.w3.org/TR/CSP/</a></li>
+										<li><a
+											href="http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html">http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</a></li>
+										<li><a
+											href="http://www.html5rocks.com/en/tutorials/security/content-security-policy/">http://www.html5rocks.com/en/tutorials/security/content-security-policy/</a></li>
+										<li><a
+											href="http://caniuse.com/#feat=contentsecuritypolicy">http://caniuse.com/#feat=contentsecuritypolicy</a></li>
+										<li><a
+											href="http://content-security-policy.com/">http://content-security-policy.com/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-5">
+						<h4>Отсутствует заголовок (Header) для защиты от кликджекинга </h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10020/">Заголовок против кликджекинга </a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/1021.html">1021</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-6">
+						<h4>Отсутствуют токены против CSRF атак</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10202/">Отсутствуют токены против CSRF атак</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/352.html">352</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>9</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://projects.webappsec.org/Cross-Site-Request-Forgery">http://projects.webappsec.org/Cross-Site-Request-Forgery</a></li>
+										<li><a
+											href="https://cwe.mitre.org/data/definitions/352.html">https://cwe.mitre.org/data/definitions/352.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-7">
+						<h4>Уязвимость JS Библиотеки (Library)</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10003/">Уязвимая JS-библиотека (на платформе Retire.js)</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/829.html">829</a></td>
+							</tr>
+							
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://github.com/jquery/jquery/issues/2432">https://github.com/jquery/jquery/issues/2432</a></li>
+										<li><a
+											href="http://blog.jquery.com/2016/01/08/jquery-2-2-and-1-12-released/">http://blog.jquery.com/2016/01/08/jquery-2-2-and-1-12-released/</a></li>
+										<li><a
+											href="http://research.insecurelabs.org/jquery/test/">http://research.insecurelabs.org/jquery/test/</a></li>
+										<li><a
+											href="https://blog.jquery.com/2019/04/10/jquery-3-4-0-released/">https://blog.jquery.com/2019/04/10/jquery-3-4-0-released/</a></li>
+										<li><a
+											href="https://nvd.nist.gov/vuln/detail/CVE-2019-11358">https://nvd.nist.gov/vuln/detail/CVE-2019-11358</a></li>
+										<li><a
+											href="https://github.com/advisories/GHSA-rmxg-73gg-4p98">https://github.com/advisories/GHSA-rmxg-73gg-4p98</a></li>
+										<li><a
+											href="https://nvd.nist.gov/vuln/detail/CVE-2015-9251">https://nvd.nist.gov/vuln/detail/CVE-2015-9251</a></li>
+										<li><a
+											href="https://github.com/jquery/jquery/commit/753d591aea698e57d6db58c9f722cd0808619b1b">https://github.com/jquery/jquery/commit/753d591aea698e57d6db58c9f722cd0808619b1b</a></li>
+										<li><a
+											href="https://bugs.jquery.com/ticket/11974">https://bugs.jquery.com/ticket/11974</a></li>
+										<li><a
+											href="https://github.com/jquery/jquery.com/issues/162">https://github.com/jquery/jquery.com/issues/162</a></li>
+										<li><a
+											href="https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/">https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-8">
+						<h4>Заголовок X-Content-Type-Options отсутствует </h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10021/">Заголовок X-Content-Type-Options отсутствует </a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx">http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</a></li>
+										<li><a
+											href="https://owasp.org/www-community/Security_Headers">https://owasp.org/www-community/Security_Headers</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-9">
+						<h4>Раскрытие ошибок приложения </h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/90022/">Раскрытие ошибок приложения </a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							
+						</table>
+					</li>
+					<li
+						id="alert-type-10">
+						<h4>Сервер утечка информации о версии через поле заголовка HTTP-ответа «Server» </h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10036/">Заголовок ответа HTTP-сервера </a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://httpd.apache.org/docs/current/mod/core.html#servertokens">http://httpd.apache.org/docs/current/mod/core.html#servertokens</a></li>
+										<li><a
+											href="http://msdn.microsoft.com/en-us/library/ff648552.aspx#ht_urlscan_007">http://msdn.microsoft.com/en-us/library/ff648552.aspx#ht_urlscan_007</a></li>
+										<li><a
+											href="http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx">http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx</a></li>
+										<li><a
+											href="http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html">http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-11">
+						<h4>Authentication Request Identified</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10111/">Authentication Request Identified</a>)
+									</span>   
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://www.zaproxy.org/docs/desktop/addons/authentication-helper/auth-req-id/">https://www.zaproxy.org/docs/desktop/addons/authentication-helper/auth-req-id/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-12">
+						<h4>GET для POST</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by an active scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10058/">GET для POST</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/16.html">16</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>20</td>
+							</tr>
+							
+						</table>
+					</li>
+					<li
+						id="alert-type-13">
+						<h4>Атрибут элемента HTML, управляемый пользователем (потенциальный XSS) </h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10031/">Атрибут элемента HTML, управляемый пользователем (потенциальный XSS) </a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/20.html">20</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>20</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute">http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-14">
+						<h4>Раскрытие информации - подозрительные комментарии </h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10027/">Раскрытие информации - подозрительные комментарии </a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							
+						</table>
+					</li>
+					<li
+						id="alert-type-15">
+						<h4>Современное веб-приложение </h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10109/">Современное веб-приложение </a>)
+									</span>   
+								</td>
+							</tr>
+							
+							
+							
+						</table>
+					</li>
+				</ol>
+			</section>
+		</section>
+		 
+	</main>
+</body>
+</html>
+
+
+

@@ -1,0 +1,2074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Отчет о сканировании ZAP </title>
+<link
+	href="owasp_zap_8060/normalize/normalize.css" rel="stylesheet">
+<link
+	href="owasp_zap_8060/themes/original/main.css" rel="stylesheet">
+<link
+	href="owasp_zap_8060/themes/original/colors.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1>Отчет о сканировании ZAP </h1>
+		<p>
+			<span>Generated with</span> <a href="https://zaproxy.org"><img
+				src="owasp_zap_8060/zap32x32.png" alt="The ZAP logo" class="zap-logo">ZAP</a>
+			<span>on пн 20 мая 2024, at 22:12:44</span>
+		</p>
+		<p>ZAP Version: 2.14.0</p>
+		<p>
+			ZAP is supported by the <a href="https://crashoverride.com/?zap=rep">Crash Override Open Source Fellowship</a>
+		</p>
+	</header>
+
+	<main>
+
+		<section id="contents" class="contents">
+			<h2>Contents</h2>
+			<nav>
+				<ol>
+					<li><a
+						href="#about-this-report">About this report</a>
+						<ol>
+							
+							<li><a
+								href="#report-parameters">Report parameters</a></li>
+						</ol></li>
+					<data-th-block>
+					<li><a
+						href="#summaries">Summaries</a>
+						<ol>
+							<li><a
+								href="#risk-confidence-counts">Alert counts by risk and confidence</a></li>
+							<li><a
+								href="#site-risk-counts">Alert counts by site and risk</a></li>
+							<li><a
+								href="#alert-type-counts">Alert counts by alert type</a></li>
+						</ol></li>
+					<li><a
+						href="#alerts">Alerts</a>
+						<ol>
+							
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-3-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Высокий</span>, <span>Confidence</span>=<span
+									class="confidence-level">Высокий</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-3-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Высокий</span>, <span>Confidence</span>=<span
+									class="confidence-level">Средний</span> <span>(3)</span></a></li>
+							
+							
+							  
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-2-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Средний</span>, <span>Confidence</span>=<span
+									class="confidence-level">Высокий</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-2-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Средний</span>, <span>Confidence</span>=<span
+									class="confidence-level">Средний</span> <span>(2)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-2-confidence-1"><span>Risk</span>=<span
+									class="risk-level">Средний</span>, <span>Confidence</span>=<span
+									class="confidence-level">Низкий</span> <span>(1)</span></a></li>
+							  
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-1-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Низкий</span>, <span>Confidence</span>=<span
+									class="confidence-level">Высокий</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-1-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Низкий</span>, <span>Confidence</span>=<span
+									class="confidence-level">Средний</span> <span>(4)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-1-confidence-1"><span>Risk</span>=<span
+									class="risk-level">Низкий</span>, <span>Confidence</span>=<span
+									class="confidence-level">Низкий</span> <span>(1)</span></a></li>
+							  
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-0-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Информационный</span>, <span>Confidence</span>=<span
+									class="confidence-level">Высокий</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-0-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Информационный</span>, <span>Confidence</span>=<span
+									class="confidence-level">Средний</span> <span>(2)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-0-confidence-1"><span>Risk</span>=<span
+									class="risk-level">Информационный</span>, <span>Confidence</span>=<span
+									class="confidence-level">Низкий</span> <span>(1)</span></a></li>
+							  
+						</ol></li>
+					<li><a
+						href="#appendix">Appendix</a>
+						<ol>
+							<li><a
+								href="#alert-types">Alert types</a></li>
+						</ol></li>
+					</data-th-block>
+				</ol>
+			</nav>
+		</section>
+
+		<section
+			id="about-this-report" class="about-this-report">
+			<h2>About this report</h2>
+
+			
+
+			<section
+				id="report-parameters">
+				<h3>Report parameters</h3>
+				<div class="report-parameters--container">
+					<h4>Contexts</h4>
+					
+					
+					<p>No contexts were selected, so all contexts were included by default.</p>
+					  
+
+					<h4>Sites</h4>
+					
+					<p>The following sites were included:</p>
+					<ul class="sites-list">
+						<li><span class="site">http://92.51.39.106:8060</span></li>
+					</ul>
+					
+					<p>(If no sites were selected, all sites were included by default.)</p>
+					<p>An included site must also be within one of the included contexts for its data to be included in the report.</p>
+
+					<h4>Risk levels</h4>
+					<p>
+						<span>Included</span>:
+						 
+						<span class="included-risk-codes"><span class="risk-level">Высокий</span>, <span class="risk-level">Средний</span>, <span class="risk-level">Низкий</span>, <span class="risk-level">Информационный</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						 <span>None</span>
+						
+					</p>
+
+					<h4>Confidence levels</h4>
+					<p>
+						<span>Included</span>:
+						
+						
+						<span class="included-confidence-codes"><span class="confidence-level">Пользователь подтвержден </span>, <span class="confidence-level">Высокий</span>, <span class="confidence-level">Средний</span>, <span class="confidence-level">Низкий</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						
+						
+						<span class="included-confidence-codes"> <span class="confidence-level">Пользователь подтвержден </span>, <span class="confidence-level">Высокий</span>, <span class="confidence-level">Средний</span>, <span class="confidence-level">Низкий</span>, <span class="confidence-level">Ложно-положительное</span></span>
+					</p>
+				</div>
+			</section>
+		</section>
+
+		
+		<section>
+			
+		</section>
+		
+		<section id="summaries" class="summaries">
+			<h2>Summaries</h2>
+
+			<section
+				id="risk-confidence-counts">
+				<h3>Alert counts by risk and confidence</h3>
+				<table class="risk-confidence-counts-table">
+					<caption>
+						<p>This table shows the number of alerts for each level of risk and confidence included in the report.</p>
+						<p>(The percentages in brackets represent the count as a percentage of the total number of alerts included in the report, rounded to one decimal place.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col
+							style="width: 14.0%"><col
+							style="width: 14.0%"><col
+							style="width: 14.0%"><col
+							style="width: 14.0%">
+						<col style="width: 14.0%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup"
+								colspan="5">Confidence</th>
+						</tr>
+						<tr>
+							<th scope="col">Пользователь подтвержден </th>
+							<th scope="col">Высокий</th>
+							<th scope="col">Средний</th>
+							<th scope="col">Низкий</th>
+							<th scope="col">Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup"
+								rowspan="5">Risk</th>
+							<th scope="row">Высокий</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0 %)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(5,6 %)</span></td>
+							<td><span>3</span><br> <span
+								class="additional-info-percentages">(16,7 %)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0 %)</span></td>
+							<td><span>4</span><br> <span class="additional-info-percentages">(22,2 %)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Средний</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0 %)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(5,6 %)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(11,1 %)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(5,6 %)</span></td>
+							<td><span>4</span><br> <span class="additional-info-percentages">(22,2 %)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Низкий</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0 %)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(5,6 %)</span></td>
+							<td><span>4</span><br> <span
+								class="additional-info-percentages">(22,2 %)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(5,6 %)</span></td>
+							<td><span>6</span><br> <span class="additional-info-percentages">(33,3 %)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Информационный</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0 %)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(5,6 %)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(11,1 %)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(5,6 %)</span></td>
+							<td><span>4</span><br> <span class="additional-info-percentages">(22,2 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row">Total</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0 %)</span></td>
+							<td><span>4</span><br> <span
+								class="additional-info-percentages">(22,2 %)</span></td>
+							<td><span>11</span><br> <span
+								class="additional-info-percentages">(61,1 %)</span></td>
+							<td><span>3</span><br> <span
+								class="additional-info-percentages">(16,7 %)</span></td>
+							<td><span>18</span><br> <span
+								class="additional-info-percentages">(100%)</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section
+				id="site-risk-counts">
+				<h3>Alert counts by site and risk</h3>
+				<table class="site-risk-counts-table">
+					<caption>
+						<p>This table shows, for each site for which one or more alerts were raised, the number of alerts raised at each risk level.</p>
+						<p>Alerts with a confidence level of &quot;False Positive&quot; have been excluded from these counts.</p>
+						<p>(The numbers in brackets are the number of alerts raised for the site at or above that risk level.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col
+							style="width: 16.25%"><col
+							style="width: 16.25%"><col
+							style="width: 16.25%"><col
+							style="width: 16.25%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup" colspan="4">Risk</th>
+						</tr>
+						<tr>
+							<th scope="col">
+								<span>Высокий</span><br>  <span
+									class="additional-info-percentages">(= Высокий)</span>  
+							</th>
+							<th scope="col">
+								<span>Средний</span><br>   <span
+									class="additional-info-percentages">(&gt;= Средний)</span> 
+							</th>
+							<th scope="col">
+								<span>Низкий</span><br>   <span
+									class="additional-info-percentages">(&gt;= Низкий)</span> 
+							</th>
+							<th scope="col">
+								<span>Информационный</span><br>   <span
+									class="additional-info-percentages">(&gt;= Информационный)</span> 
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup"
+								rowspan="1">Site</th>
+							<th scope="row">http://92.51.39.106:8060</th>
+							
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(1)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(3)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(4)</span></td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section
+				id="alert-type-counts">
+				<h3>Alert counts by alert type</h3>
+				<table class="alert-type-counts-table">
+					<caption>
+						<p>This table shows the number of alerts of each alert type, together with the alert type&#39;s risk level.</p>
+						<p>(The percentages in brackets represent each count as a percentage, rounded to one decimal place, of the total number of alerts included in this report.)</p>
+					</caption>
+					<thead>
+						<tr>
+							<th scope="col">Alert type</th>
+							<th scope="col">Risk</th>
+							<th scope="col">Count</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-0">SQL-инъекция - MySQL</a></th>
+							<td class="risk-level">Высокий</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(5,6 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-1">Межсайтовый скриптинг (на основе DOM) </a></th>
+							<td class="risk-level">Высокий</td>
+							<td><span>22</span><br> <span
+								class="additional-info-percentages">(122,2 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-2">Межсайтовый скриптинг (отражение) </a></th>
+							<td class="risk-level">Высокий</td>
+							<td><span>3</span><br> <span
+								class="additional-info-percentages">(16,7 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-3">Межсайтовый скриптинг (постоянный) </a></th>
+							<td class="risk-level">Высокий</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(5,6 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-4">XSLT Инъекция</a></th>
+							<td class="risk-level">Средний</td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(11,1 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-5">Заголовок Content Security Policy (CSP) не задан</a></th>
+							<td class="risk-level">Средний</td>
+							<td><span>35</span><br> <span
+								class="additional-info-percentages">(194,4 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-6">Отсутствует заголовок (Header) для защиты от кликджекинга </a></th>
+							<td class="risk-level">Средний</td>
+							<td><span>21</span><br> <span
+								class="additional-info-percentages">(116,7 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-7">Отсутствуют токены против CSRF атак</a></th>
+							<td class="risk-level">Средний</td>
+							<td><span>27</span><br> <span
+								class="additional-info-percentages">(150,0 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-8">Cookie No HttpOnly Flag</a></th>
+							<td class="risk-level">Низкий</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(5,6 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-9">Cookie без атрибута SameSite </a></th>
+							<td class="risk-level">Низкий</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(5,6 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-10">Заголовок X-Content-Type-Options отсутствует </a></th>
+							<td class="risk-level">Низкий</td>
+							<td><span>29</span><br> <span
+								class="additional-info-percentages">(161,1 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-11">Раскрытие отметки времени  - Unix</a></th>
+							<td class="risk-level">Низкий</td>
+							<td><span>5</span><br> <span
+								class="additional-info-percentages">(27,8 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-12">Сервер утекает информацию через поля заголовка HTTP-ответа &quot;X-Powered-By&quot; </a></th>
+							<td class="risk-level">Низкий</td>
+							<td><span>37</span><br> <span
+								class="additional-info-percentages">(205,6 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-13">Сервер утечка информации о версии через поле заголовка HTTP-ответа «Server» </a></th>
+							<td class="risk-level">Низкий</td>
+							<td><span>59</span><br> <span
+								class="additional-info-percentages">(327,8 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-14">Authentication Request Identified</a></th>
+							<td class="risk-level">Информационный</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(5,6 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-15">Session Management Response Identified</a></th>
+							<td class="risk-level">Информационный</td>
+							<td><span>7</span><br> <span
+								class="additional-info-percentages">(38,9 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-16">Атрибут элемента HTML, управляемый пользователем (потенциальный XSS) </a></th>
+							<td class="risk-level">Информационный</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(5,6 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-17">Раскрытие информации - конфиденциальная информация в URL </a></th>
+							<td class="risk-level">Информационный</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(5,6 %)</span></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th scope="row">Total</th>
+							<td></td>
+							<td>18</td>
+						</tr>
+					</tfoot>
+				</table>
+			</section>
+		</section>
+
+		<section id="alerts" class="alerts">
+			<h2>Alerts</h2>
+			<ol>
+				
+				 
+				
+				
+				<li id="alerts--risk-3-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Высокий</span>, <span>Confidence</span>=<span
+							class="confidence-level">Высокий</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-3-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Высокий</span>, <span>Confidence</span>=<span
+							class="confidence-level">Средний</span> <span>(3)</span>
+					</h3>
+					<ol>
+						
+						
+						
+					</ol>
+				</li>
+				
+				
+				  
+				 
+				
+				
+				<li id="alerts--risk-2-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Средний</span>, <span>Confidence</span>=<span
+							class="confidence-level">Высокий</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-2-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Средний</span>, <span>Confidence</span>=<span
+							class="confidence-level">Средний</span> <span>(2)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://92.51.39.106:8060</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-6">Отсутствует заголовок (Header) для защиты от кликджекинга </a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://92.51.39.106:8060</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/11-Client-side_Testing/09-Testing_for_Clickjacking">WSTG-v42-CLNT-09</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Ответ не включает Content-Security-Policy с директивой «frame-ancestors» или X-Frame-Options для защиты от атак «ClickJacking».</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (248 bytes)</summary>
+				
+				<pre><code>GET http://92.51.39.106:8060 HTTP/1.1
+host: 92.51.39.106:8060
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 OPR/102.0.0.0
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (389 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Mon, 20 May 2024 14:47:00 GMT
+Server: Apache/2.4.7 (Ubuntu)
+X-Powered-By: PHP/5.5.9-1ubuntu4.29
+Set-Cookie: PHPSESSID=867fnn5ug0jcmlbuhg5o88puh7; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Length: 3362
+Content-Type: text/html
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3362 bytes)</summary>
+				
+				<pre><code>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/screen.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot;&gt;
+    &lt;!--[if IE]&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/ie.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;&lt;![endif]--&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/stylings.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
+    &lt;title&gt;NetologyVulnApp.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;container &quot; style=&quot;border: 2px solid #5c95cf;&quot;&gt;
+      &lt;div class=&quot;column span-24 first last&quot;&gt;
+	&lt;h1 id=&quot;title&quot;&gt;&lt;a href=&quot;/&quot;&gt;NetologyVulnApp.com&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;menu&quot;&gt;
+	&lt;div class=&quot;column prepend-1 span-14 first&quot;&gt;
+	  &lt;ul class=&quot;menu&quot;&gt;
+	    &lt;li class=&quot;current&quot;&gt;&lt;a href=&quot;/users/home.php&quot;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/upload.php&quot;&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/recent.php&quot;&gt;&lt;span&gt;Recent&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/guestbook.php&quot;&gt;&lt;span&gt;Guestbook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;column prepend-1 span-7 first last&quot;&gt;
+	  &lt;ul class=&quot;menu top_login&quot; &gt;
+      	    &lt;li&gt;&lt;a href=&quot;/users/login.php&quot;&gt;&lt;Span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&quot;column span-24 first last&quot; id=&quot;search_bar_blue&quot;&gt;
+	&lt;div class=&quot;column prepend-17 span-7 first last&quot; id=&quot;search_box&quot;&gt;
+	  &lt;form action=&quot;/pictures/search.php&quot; method=&quot;get&quot; style=&quot;display:inline;&quot;&gt;
+	    &lt;input id=&quot;query2&quot; name=&quot;query&quot; size=&quot;15&quot; style=&quot;padding: 2px; font-size: 16px; text-decoration:none;border:none;vertical-align:middle;&quot; type=&quot;text&quot; value=&quot;&quot;/&gt;
+	    &lt;input src=&quot;/images/search_button_white.gif&quot; type=&quot;image&quot; style=&quot;border: 0pt none ; position: relative; top: 0px;vertical-align:middle;margin-left: 1em;&quot; /&gt;
+	  &lt;/form&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+   
+
+&lt;div class=&quot;column prepend-1 span-24 first last&quot;&gt;
+  &lt;h2&gt;Welcome to NetologyVulnApp&lt;/h2&gt;
+  &lt;p&gt;
+    On NetologyVulnApp, you can share all your crazy pics with your friends. &lt;br /&gt;
+    But that&#39;s not all, you can also buy the rights to the high quality &lt;br /&gt;
+    version of someone&#39;s pictures. NetologyVulnApp is fun for the whole family.
+  &lt;/p&gt;
+
+  &lt;h3&gt;New Here?&lt;/h3&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/users/register.php&quot;&gt;Create an account&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/users/sample.php?userid=1&quot;&gt;Check out a sample user!&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/calendar.php&quot;&gt;What is going on today?&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;Or you can test to see if NetologyVulnApp can handle a file:&lt;/h4&gt; &lt;br /&gt;
+  &lt;script&gt;
+    document.write(&#39;&lt;form enctype=&quot;multipart/form-data&quot; action=&quot;/pic&#39; + &#39;check&#39; + &#39;.php&quot; method=&quot;POST&quot;&gt;&lt;input type=&quot;hidden&quot; name=&quot;MAX_FILE_SIZE&quot; value=&quot;30000&quot; /&gt;Check this file: &lt;input name=&quot;userfile&quot; type=&quot;file&quot; /&gt; &lt;br /&gt;With this name: &lt;input name=&quot;name&quot; type=&quot;text&quot; /&gt; &lt;br /&gt; &lt;br /&gt;&lt;input type=&quot;submit&quot; value=&quot;Send File&quot; /&gt;&lt;br /&gt; &lt;/form&gt;&#39;);
+  &lt;/script&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+
+
+       &lt;div class=&quot;column span-24 first last&quot; id=&quot;footer&quot; &gt;
+	&lt;ul&gt;
+	  &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; |&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/admin/index.php?page=login&quot;&gt;Admin&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;mailto:contact@NetologyVulnApp.com&quot;&gt;Contact&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;/tos.php&quot;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   </code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>x-frame-options</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Современные веб-браузеры поддерживают Content-Security-Policy и заголовки HTTP X-Frame-Options.Убедитесь, что один из них установлен на всех веб-страницах, возвращаемых вашим сайтом/приложением.Если вы ожидаете, что страница будет обрамлена только страницами на вашем сервере (например, это часть FRAMESET), вам следует использовать SAMEORIGIN, в противном случае, если вы никогда не ожидаете, что страница будет обрамлена, вам следует использовать DENY.В качестве альтернативы рассмотрите возможность реализации директивы Content Security Policy «frame-ancestors».</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-2-confidence-1">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Средний</span>, <span>Confidence</span>=<span
+							class="confidence-level">Низкий</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						
+						
+					</ol>
+				</li>
+				  
+				 
+				
+				
+				<li id="alerts--risk-1-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Низкий</span>, <span>Confidence</span>=<span
+							class="confidence-level">Высокий</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-1-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Низкий</span>, <span>Confidence</span>=<span
+							class="confidence-level">Средний</span> <span>(4)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://92.51.39.106:8060</span> <span>(2)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-8">Cookie No HttpOnly Flag</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://92.51.39.106:8060</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes">WSTG-v42-SESS-02</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Файл cookie был установлен без флага HttpOnly, что означает, что к нему можно получить доступ с помощью JavaScript. Если на этой странице может быть запущен вредоносный сценарий, cookie будет доступен и может быть передан на другой сайт. Если это файл cookie сеанса, то возможен захват сеанса. </p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (248 bytes)</summary>
+				
+				<pre><code>GET http://92.51.39.106:8060 HTTP/1.1
+host: 92.51.39.106:8060
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 OPR/102.0.0.0
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (389 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Mon, 20 May 2024 14:47:00 GMT
+Server: Apache/2.4.7 (Ubuntu)
+X-Powered-By: PHP/5.5.9-1ubuntu4.29
+Set-Cookie: PHPSESSID=867fnn5ug0jcmlbuhg5o88puh7; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Length: 3362
+Content-Type: text/html
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3362 bytes)</summary>
+				
+				<pre><code>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/screen.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot;&gt;
+    &lt;!--[if IE]&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/ie.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;&lt;![endif]--&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/stylings.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
+    &lt;title&gt;NetologyVulnApp.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;container &quot; style=&quot;border: 2px solid #5c95cf;&quot;&gt;
+      &lt;div class=&quot;column span-24 first last&quot;&gt;
+	&lt;h1 id=&quot;title&quot;&gt;&lt;a href=&quot;/&quot;&gt;NetologyVulnApp.com&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;menu&quot;&gt;
+	&lt;div class=&quot;column prepend-1 span-14 first&quot;&gt;
+	  &lt;ul class=&quot;menu&quot;&gt;
+	    &lt;li class=&quot;current&quot;&gt;&lt;a href=&quot;/users/home.php&quot;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/upload.php&quot;&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/recent.php&quot;&gt;&lt;span&gt;Recent&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/guestbook.php&quot;&gt;&lt;span&gt;Guestbook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;column prepend-1 span-7 first last&quot;&gt;
+	  &lt;ul class=&quot;menu top_login&quot; &gt;
+      	    &lt;li&gt;&lt;a href=&quot;/users/login.php&quot;&gt;&lt;Span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&quot;column span-24 first last&quot; id=&quot;search_bar_blue&quot;&gt;
+	&lt;div class=&quot;column prepend-17 span-7 first last&quot; id=&quot;search_box&quot;&gt;
+	  &lt;form action=&quot;/pictures/search.php&quot; method=&quot;get&quot; style=&quot;display:inline;&quot;&gt;
+	    &lt;input id=&quot;query2&quot; name=&quot;query&quot; size=&quot;15&quot; style=&quot;padding: 2px; font-size: 16px; text-decoration:none;border:none;vertical-align:middle;&quot; type=&quot;text&quot; value=&quot;&quot;/&gt;
+	    &lt;input src=&quot;/images/search_button_white.gif&quot; type=&quot;image&quot; style=&quot;border: 0pt none ; position: relative; top: 0px;vertical-align:middle;margin-left: 1em;&quot; /&gt;
+	  &lt;/form&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+   
+
+&lt;div class=&quot;column prepend-1 span-24 first last&quot;&gt;
+  &lt;h2&gt;Welcome to NetologyVulnApp&lt;/h2&gt;
+  &lt;p&gt;
+    On NetologyVulnApp, you can share all your crazy pics with your friends. &lt;br /&gt;
+    But that&#39;s not all, you can also buy the rights to the high quality &lt;br /&gt;
+    version of someone&#39;s pictures. NetologyVulnApp is fun for the whole family.
+  &lt;/p&gt;
+
+  &lt;h3&gt;New Here?&lt;/h3&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/users/register.php&quot;&gt;Create an account&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/users/sample.php?userid=1&quot;&gt;Check out a sample user!&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/calendar.php&quot;&gt;What is going on today?&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;Or you can test to see if NetologyVulnApp can handle a file:&lt;/h4&gt; &lt;br /&gt;
+  &lt;script&gt;
+    document.write(&#39;&lt;form enctype=&quot;multipart/form-data&quot; action=&quot;/pic&#39; + &#39;check&#39; + &#39;.php&quot; method=&quot;POST&quot;&gt;&lt;input type=&quot;hidden&quot; name=&quot;MAX_FILE_SIZE&quot; value=&quot;30000&quot; /&gt;Check this file: &lt;input name=&quot;userfile&quot; type=&quot;file&quot; /&gt; &lt;br /&gt;With this name: &lt;input name=&quot;name&quot; type=&quot;text&quot; /&gt; &lt;br /&gt; &lt;br /&gt;&lt;input type=&quot;submit&quot; value=&quot;Send File&quot; /&gt;&lt;br /&gt; &lt;/form&gt;&#39;);
+  &lt;/script&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+
+
+       &lt;div class=&quot;column span-24 first last&quot; id=&quot;footer&quot; &gt;
+	&lt;ul&gt;
+	  &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; |&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/admin/index.php?page=login&quot;&gt;Admin&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;mailto:contact@NetologyVulnApp.com&quot;&gt;Contact&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;/tos.php&quot;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   </code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>PHPSESSID</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>Set-Cookie: PHPSESSID</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Убедитесь, что для всех файлов cookie установлен флаг HttpOnly. </p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-9">Cookie без атрибута SameSite </a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://92.51.39.106:8060</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes">WSTG-v42-SESS-02</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control.html">OWASP_2017_A05</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a &#39;cross-site&#39; request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (248 bytes)</summary>
+				
+				<pre><code>GET http://92.51.39.106:8060 HTTP/1.1
+host: 92.51.39.106:8060
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 OPR/102.0.0.0
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (389 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Mon, 20 May 2024 14:47:00 GMT
+Server: Apache/2.4.7 (Ubuntu)
+X-Powered-By: PHP/5.5.9-1ubuntu4.29
+Set-Cookie: PHPSESSID=867fnn5ug0jcmlbuhg5o88puh7; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Length: 3362
+Content-Type: text/html
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3362 bytes)</summary>
+				
+				<pre><code>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/screen.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot;&gt;
+    &lt;!--[if IE]&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/ie.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;&lt;![endif]--&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/stylings.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
+    &lt;title&gt;NetologyVulnApp.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;container &quot; style=&quot;border: 2px solid #5c95cf;&quot;&gt;
+      &lt;div class=&quot;column span-24 first last&quot;&gt;
+	&lt;h1 id=&quot;title&quot;&gt;&lt;a href=&quot;/&quot;&gt;NetologyVulnApp.com&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;menu&quot;&gt;
+	&lt;div class=&quot;column prepend-1 span-14 first&quot;&gt;
+	  &lt;ul class=&quot;menu&quot;&gt;
+	    &lt;li class=&quot;current&quot;&gt;&lt;a href=&quot;/users/home.php&quot;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/upload.php&quot;&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/recent.php&quot;&gt;&lt;span&gt;Recent&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/guestbook.php&quot;&gt;&lt;span&gt;Guestbook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;column prepend-1 span-7 first last&quot;&gt;
+	  &lt;ul class=&quot;menu top_login&quot; &gt;
+      	    &lt;li&gt;&lt;a href=&quot;/users/login.php&quot;&gt;&lt;Span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&quot;column span-24 first last&quot; id=&quot;search_bar_blue&quot;&gt;
+	&lt;div class=&quot;column prepend-17 span-7 first last&quot; id=&quot;search_box&quot;&gt;
+	  &lt;form action=&quot;/pictures/search.php&quot; method=&quot;get&quot; style=&quot;display:inline;&quot;&gt;
+	    &lt;input id=&quot;query2&quot; name=&quot;query&quot; size=&quot;15&quot; style=&quot;padding: 2px; font-size: 16px; text-decoration:none;border:none;vertical-align:middle;&quot; type=&quot;text&quot; value=&quot;&quot;/&gt;
+	    &lt;input src=&quot;/images/search_button_white.gif&quot; type=&quot;image&quot; style=&quot;border: 0pt none ; position: relative; top: 0px;vertical-align:middle;margin-left: 1em;&quot; /&gt;
+	  &lt;/form&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+   
+
+&lt;div class=&quot;column prepend-1 span-24 first last&quot;&gt;
+  &lt;h2&gt;Welcome to NetologyVulnApp&lt;/h2&gt;
+  &lt;p&gt;
+    On NetologyVulnApp, you can share all your crazy pics with your friends. &lt;br /&gt;
+    But that&#39;s not all, you can also buy the rights to the high quality &lt;br /&gt;
+    version of someone&#39;s pictures. NetologyVulnApp is fun for the whole family.
+  &lt;/p&gt;
+
+  &lt;h3&gt;New Here?&lt;/h3&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/users/register.php&quot;&gt;Create an account&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/users/sample.php?userid=1&quot;&gt;Check out a sample user!&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/calendar.php&quot;&gt;What is going on today?&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;Or you can test to see if NetologyVulnApp can handle a file:&lt;/h4&gt; &lt;br /&gt;
+  &lt;script&gt;
+    document.write(&#39;&lt;form enctype=&quot;multipart/form-data&quot; action=&quot;/pic&#39; + &#39;check&#39; + &#39;.php&quot; method=&quot;POST&quot;&gt;&lt;input type=&quot;hidden&quot; name=&quot;MAX_FILE_SIZE&quot; value=&quot;30000&quot; /&gt;Check this file: &lt;input name=&quot;userfile&quot; type=&quot;file&quot; /&gt; &lt;br /&gt;With this name: &lt;input name=&quot;name&quot; type=&quot;text&quot; /&gt; &lt;br /&gt; &lt;br /&gt;&lt;input type=&quot;submit&quot; value=&quot;Send File&quot; /&gt;&lt;br /&gt; &lt;/form&gt;&#39;);
+  &lt;/script&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+
+
+       &lt;div class=&quot;column span-24 first last&quot; id=&quot;footer&quot; &gt;
+	&lt;ul&gt;
+	  &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; |&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/admin/index.php?page=login&quot;&gt;Admin&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;mailto:contact@NetologyVulnApp.com&quot;&gt;Contact&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;/tos.php&quot;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   </code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>PHPSESSID</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>Set-Cookie: PHPSESSID</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Убедитесь, что для атрибута SameSite установлено значение «слабый» (&#39;lax&#39;</p>
+
+<p>)или в идеальном случае «строгий» (strict&#39;) для всех файлов cookie. </p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-1-confidence-1">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Низкий</span>, <span>Confidence</span>=<span
+							class="confidence-level">Низкий</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						
+						
+					</ol>
+				</li>
+				  
+				 
+				
+				
+				<li id="alerts--risk-0-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Информационный</span>, <span>Confidence</span>=<span
+							class="confidence-level">Высокий</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-0-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Информационный</span>, <span>Confidence</span>=<span
+							class="confidence-level">Средний</span> <span>(2)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://92.51.39.106:8060</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-15">Session Management Response Identified</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://92.51.39.106:8060</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The given response has been identified as containing a session management token. The &#39;Other Info&#39; field contains a set of header tokens that can be used in the Header Based Session Management Method. If the request is in a context which has a Session Management Method set to &quot;Auto-Detect&quot; then this rule will change the session management to use the tokens identified.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>cookie:PHPSESSID</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (248 bytes)</summary>
+				
+				<pre><code>GET http://92.51.39.106:8060 HTTP/1.1
+host: 92.51.39.106:8060
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 OPR/102.0.0.0
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (389 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Mon, 20 May 2024 14:47:00 GMT
+Server: Apache/2.4.7 (Ubuntu)
+X-Powered-By: PHP/5.5.9-1ubuntu4.29
+Set-Cookie: PHPSESSID=867fnn5ug0jcmlbuhg5o88puh7; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Length: 3362
+Content-Type: text/html
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3362 bytes)</summary>
+				
+				<pre><code>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/screen.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot;&gt;
+    &lt;!--[if IE]&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/ie.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;&lt;![endif]--&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/stylings.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
+    &lt;title&gt;NetologyVulnApp.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;container &quot; style=&quot;border: 2px solid #5c95cf;&quot;&gt;
+      &lt;div class=&quot;column span-24 first last&quot;&gt;
+	&lt;h1 id=&quot;title&quot;&gt;&lt;a href=&quot;/&quot;&gt;NetologyVulnApp.com&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;menu&quot;&gt;
+	&lt;div class=&quot;column prepend-1 span-14 first&quot;&gt;
+	  &lt;ul class=&quot;menu&quot;&gt;
+	    &lt;li class=&quot;current&quot;&gt;&lt;a href=&quot;/users/home.php&quot;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/upload.php&quot;&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/recent.php&quot;&gt;&lt;span&gt;Recent&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/guestbook.php&quot;&gt;&lt;span&gt;Guestbook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;column prepend-1 span-7 first last&quot;&gt;
+	  &lt;ul class=&quot;menu top_login&quot; &gt;
+      	    &lt;li&gt;&lt;a href=&quot;/users/login.php&quot;&gt;&lt;Span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&quot;column span-24 first last&quot; id=&quot;search_bar_blue&quot;&gt;
+	&lt;div class=&quot;column prepend-17 span-7 first last&quot; id=&quot;search_box&quot;&gt;
+	  &lt;form action=&quot;/pictures/search.php&quot; method=&quot;get&quot; style=&quot;display:inline;&quot;&gt;
+	    &lt;input id=&quot;query2&quot; name=&quot;query&quot; size=&quot;15&quot; style=&quot;padding: 2px; font-size: 16px; text-decoration:none;border:none;vertical-align:middle;&quot; type=&quot;text&quot; value=&quot;&quot;/&gt;
+	    &lt;input src=&quot;/images/search_button_white.gif&quot; type=&quot;image&quot; style=&quot;border: 0pt none ; position: relative; top: 0px;vertical-align:middle;margin-left: 1em;&quot; /&gt;
+	  &lt;/form&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+   
+
+&lt;div class=&quot;column prepend-1 span-24 first last&quot;&gt;
+  &lt;h2&gt;Welcome to NetologyVulnApp&lt;/h2&gt;
+  &lt;p&gt;
+    On NetologyVulnApp, you can share all your crazy pics with your friends. &lt;br /&gt;
+    But that&#39;s not all, you can also buy the rights to the high quality &lt;br /&gt;
+    version of someone&#39;s pictures. NetologyVulnApp is fun for the whole family.
+  &lt;/p&gt;
+
+  &lt;h3&gt;New Here?&lt;/h3&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/users/register.php&quot;&gt;Create an account&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/users/sample.php?userid=1&quot;&gt;Check out a sample user!&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/calendar.php&quot;&gt;What is going on today?&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;Or you can test to see if NetologyVulnApp can handle a file:&lt;/h4&gt; &lt;br /&gt;
+  &lt;script&gt;
+    document.write(&#39;&lt;form enctype=&quot;multipart/form-data&quot; action=&quot;/pic&#39; + &#39;check&#39; + &#39;.php&quot; method=&quot;POST&quot;&gt;&lt;input type=&quot;hidden&quot; name=&quot;MAX_FILE_SIZE&quot; value=&quot;30000&quot; /&gt;Check this file: &lt;input name=&quot;userfile&quot; type=&quot;file&quot; /&gt; &lt;br /&gt;With this name: &lt;input name=&quot;name&quot; type=&quot;text&quot; /&gt; &lt;br /&gt; &lt;br /&gt;&lt;input type=&quot;submit&quot; value=&quot;Send File&quot; /&gt;&lt;br /&gt; &lt;/form&gt;&#39;);
+  &lt;/script&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+
+
+       &lt;div class=&quot;column span-24 first last&quot; id=&quot;footer&quot; &gt;
+	&lt;ul&gt;
+	  &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; |&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/admin/index.php?page=login&quot;&gt;Admin&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;mailto:contact@NetologyVulnApp.com&quot;&gt;Contact&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;/tos.php&quot;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   </code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>PHPSESSID</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>867fnn5ug0jcmlbuhg5o88puh7</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>This is an informational alert rather than a vulnerability and so there is nothing to fix.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-0-confidence-1">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Информационный</span>, <span>Confidence</span>=<span
+							class="confidence-level">Низкий</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						
+						
+					</ol>
+				</li>
+				  
+			</ol>
+		</section>
+
+		<section id="appendix" class="appendix">
+			<h2>Appendix</h2>
+
+			<section id="alert-types" class="alert-types">
+				<h3>Alert types</h3>
+				<p class="alert-types-intro">This section contains additional information on the types of alerts in the report.</p>
+				<ol>
+					<li
+						id="alert-type-0">
+						<h4>SQL-инъекция - MySQL</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by an active scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/40018/">SQL-инъекция</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/89.html">89</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>19</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-1">
+						<h4>Межсайтовый скриптинг (на основе DOM) </h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by an active scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/40026/">Межсайтовый скриптинг (на основе DOM) </a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/79.html">79</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>8</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://projects.webappsec.org/Cross-Site-Scripting">http://projects.webappsec.org/Cross-Site-Scripting</a></li>
+										<li><a
+											href="https://cwe.mitre.org/data/definitions/79.html">https://cwe.mitre.org/data/definitions/79.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-2">
+						<h4>Межсайтовый скриптинг (отражение) </h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by an active scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/40012/">Межсайтовый скриптинг (отражение) </a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/79.html">79</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>8</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://projects.webappsec.org/Cross-Site-Scripting">http://projects.webappsec.org/Cross-Site-Scripting</a></li>
+										<li><a
+											href="https://cwe.mitre.org/data/definitions/79.html">https://cwe.mitre.org/data/definitions/79.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-3">
+						<h4>Межсайтовый скриптинг (постоянный) </h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by an active scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/40014/">Межсайтовый скриптинг (постоянный) </a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/79.html">79</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>8</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://projects.webappsec.org/Cross-Site-Scripting">http://projects.webappsec.org/Cross-Site-Scripting</a></li>
+										<li><a
+											href="https://cwe.mitre.org/data/definitions/79.html">https://cwe.mitre.org/data/definitions/79.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-4">
+						<h4>XSLT Инъекция</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by an active scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/90017/">XSLT Инъекция</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/91.html">91</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>23</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://www.contextis.com/blog/xslt-server-side-injection-attacks">https://www.contextis.com/blog/xslt-server-side-injection-attacks</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-5">
+						<h4>Заголовок Content Security Policy (CSP) не задан</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10038/">Заголовок Content Security Policy (CSP) не задан</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy">https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</a></li>
+										<li><a
+											href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</a></li>
+										<li><a
+											href="http://www.w3.org/TR/CSP/">http://www.w3.org/TR/CSP/</a></li>
+										<li><a
+											href="http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html">http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</a></li>
+										<li><a
+											href="http://www.html5rocks.com/en/tutorials/security/content-security-policy/">http://www.html5rocks.com/en/tutorials/security/content-security-policy/</a></li>
+										<li><a
+											href="http://caniuse.com/#feat=contentsecuritypolicy">http://caniuse.com/#feat=contentsecuritypolicy</a></li>
+										<li><a
+											href="http://content-security-policy.com/">http://content-security-policy.com/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-6">
+						<h4>Отсутствует заголовок (Header) для защиты от кликджекинга </h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10020/">Заголовок против кликджекинга </a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/1021.html">1021</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-7">
+						<h4>Отсутствуют токены против CSRF атак</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10202/">Отсутствуют токены против CSRF атак</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/352.html">352</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>9</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://projects.webappsec.org/Cross-Site-Request-Forgery">http://projects.webappsec.org/Cross-Site-Request-Forgery</a></li>
+										<li><a
+											href="https://cwe.mitre.org/data/definitions/352.html">https://cwe.mitre.org/data/definitions/352.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-8">
+						<h4>Cookie No HttpOnly Flag</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10010/">Cookie No HttpOnly Flag</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/1004.html">1004</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://owasp.org/www-community/HttpOnly">https://owasp.org/www-community/HttpOnly</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-9">
+						<h4>Cookie без атрибута SameSite </h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10054/">Cookie без атрибута SameSite </a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/1275.html">1275</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site">https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-10">
+						<h4>Заголовок X-Content-Type-Options отсутствует </h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10021/">Заголовок X-Content-Type-Options отсутствует </a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx">http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</a></li>
+										<li><a
+											href="https://owasp.org/www-community/Security_Headers">https://owasp.org/www-community/Security_Headers</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-11">
+						<h4>Раскрытие отметки времени  - Unix</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10096/">Раскрытие отметки времени </a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://projects.webappsec.org/w/page/13246936/Information%20Leakage">http://projects.webappsec.org/w/page/13246936/Information%20Leakage</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-12">
+						<h4>Сервер утекает информацию через поля заголовка HTTP-ответа &quot;X-Powered-By&quot; </h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10037/">Сервер утекает информацию через поля заголовка HTTP-ответа &quot;X-Powered-By&quot; </a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx">http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx</a></li>
+										<li><a
+											href="http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html">http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-13">
+						<h4>Сервер утечка информации о версии через поле заголовка HTTP-ответа «Server» </h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10036/">Заголовок ответа HTTP-сервера </a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://httpd.apache.org/docs/current/mod/core.html#servertokens">http://httpd.apache.org/docs/current/mod/core.html#servertokens</a></li>
+										<li><a
+											href="http://msdn.microsoft.com/en-us/library/ff648552.aspx#ht_urlscan_007">http://msdn.microsoft.com/en-us/library/ff648552.aspx#ht_urlscan_007</a></li>
+										<li><a
+											href="http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx">http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx</a></li>
+										<li><a
+											href="http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html">http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-14">
+						<h4>Authentication Request Identified</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10111/">Authentication Request Identified</a>)
+									</span>   
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://www.zaproxy.org/docs/desktop/addons/authentication-helper/auth-req-id/">https://www.zaproxy.org/docs/desktop/addons/authentication-helper/auth-req-id/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-15">
+						<h4>Session Management Response Identified</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10112/">Session Management Response Identified</a>)
+									</span>   
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id">https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-16">
+						<h4>Атрибут элемента HTML, управляемый пользователем (потенциальный XSS) </h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10031/">Атрибут элемента HTML, управляемый пользователем (потенциальный XSS) </a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/20.html">20</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>20</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute">http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-17">
+						<h4>Раскрытие информации - конфиденциальная информация в URL </h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10024/">Раскрытие информации - конфиденциальная информация в URL </a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							
+						</table>
+					</li>
+				</ol>
+			</section>
+		</section>
+		 
+	</main>
+</body>
+</html>
+
+
+

@@ -1,0 +1,145 @@
+- Tornado version 5.1.1
+    - [CVE-2023-28370](https://www.cvedetails.com/cve/CVE-2023-28370/)
+- Apache version 2.4.7 (Сортированы по критичности, по убыванию)
+    - ### <a name="_mkuuxgyzhuor"></a>[CVE-2017-3167](https://www.cvedetails.com/cve/CVE-2017-3167/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания, сервер не использует заголовок Authentication: basic 
+    - ### <a name="_go91hosbs7j6"></a>[CVE-2017-7679](https://www.cvedetails.com/cve/CVE-2017-7679/)
+        - Было проверено с помощью полезной нагрузки в заголовке Content-type = “text/html; charset=utf-\xff” не дало positive срабатываний
+    - ### <a name="_qysi8w4cx344"></a>[CVE-2018-1312](https://www.cvedetails.com/cve/CVE-2018-1312/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_pfwunt7e92u6"></a>[CVE-2021-26691](https://www.cvedetails.com/cve/CVE-2021-26691/)
+        - Было проверено с помощью полезной нагрузки отправленной с помощью curl = “curl -H "SessionHeader: <длинная\_строка>" http://92.51.39.106:8060” не дало Positive срабатываний
+    - ### <a name="_xwc1hrcsku99"></a>[CVE-2021-39275](https://www.cvedetails.com/cve/CVE-2021-39275/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_sgu5xdc1zuzr"></a>[CVE-2021-44790](https://www.cvedetails.com/cve/CVE-2021-44790/)
+        - Было проверено с помощью полезной нагрузки отправленной с помощью curl = “curl -H 'Content-Disposition: form-data; name="file"; filename="test.txt"' -H "Content-Type: text/plain" -body "<длинная\_строка>" http://92.51.39.106:8060” не дало Positive срабатываний
+    - ### <a name="_kuiq1x5gwk80"></a>[CVE-2022-22720](https://www.cvedetails.com/cve/CVE-2022-22720/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания, сервер не поддерживает заголовок “Transfer-Encoding: chunked”
+    - ### <a name="_8v740dostecg"></a>[CVE-2022-23943](https://www.cvedetails.com/cve/CVE-2022-23943/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_vryemv136dz3"></a>[CVE-2022-31813](https://www.cvedetails.com/cve/CVE-2022-31813/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_x6gdjnsud4jf"></a>[CVE-2023-25690](https://www.cvedetails.com/cve/CVE-2023-25690/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_s63grlj5kug5"></a>[CVE-2017-9788](https://www.cvedetails.com/cve/CVE-2017-9788/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_6ifl6bnzla8c"></a>[CVE-2022-22721](https://www.cvedetails.com/cve/CVE-2022-22721/)
+        - Было проверено с помощью полезной нагрузки отправленной с помощью curl = “curl -X POST -d @large-request-body.txt '<http://92.51.39.106:8060>'” где large-request-body.txt - текстовый документ размером более 350 мб., не дало Positive срабатываний
+    - ### <a name="_1dbxpjaxtyrb"></a>[CVE-2022-28615](https://www.cvedetails.com/cve/CVE-2022-28615/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_f1ny74sg236v"></a>[CVE-2021-40438](https://www.cvedetails.com/cve/CVE-2021-40438/)
+        - Было проверено с помощью полезной нагрузки url=”<http://92.51.39.106:8060/users/login.php/%2e%2e/>” дало Positive срабатывание, с помощью этой уязвимости мы поднялись вверх по каталогу т.е. “[http://92.51.39.106:8060/users](http://92.51.39.106:8060/users/login.php/%2e%2e/)”. (Path Traversal)
+    - ### <a name="_ictjpih5vo6q"></a>[CVE-2022-36760](https://www.cvedetails.com/cve/CVE-2022-36760/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_uxsp7p6s82bk"></a>[CVE-2021-44224](https://www.cvedetails.com/cve/CVE-2021-44224/)
+        - Было проверено с помощью полезной нагрузки отправленной с помощью curl = “curl -x http://92.51.39.106:8060 <http://92.51.39.106:8060/%2f%2f%2f%2f%2f%2f%2f%2f%2f%2e>” не дало Positive срабатываний
+    - ### <a name="_2w2kuew9qnv4"></a>[CVE-2016-5387](https://www.cvedetails.com/cve/CVE-2016-5387/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_mjlpoi3c4fbh"></a>[CVE-2017-15715](https://www.cvedetails.com/cve/CVE-2017-15715/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_bf4kz8v85vj9"></a>[CVE-2006-20001](https://www.cvedetails.com/cve/CVE-2006-20001/)
+        - Было проверено с помощью полезной нагрузки отправленной с помощью curl = “curl -H "If: <длинная\_строка>x00" <http://92.51.39.106:8060>” не дало Positive срабатываний
+    - ### <a name="_dnb43x8y5l4v"></a>[CVE-2016-0736](https://www.cvedetails.com/cve/CVE-2016-0736/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_yz4lvgq4b14b"></a>[CVE-2016-2161](https://www.cvedetails.com/cve/CVE-2016-2161/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_vwrewbqp9c0j"></a>[CVE-2016-8743](https://www.cvedetails.com/cve/CVE-2016-8743/)
+        - Было проверено с помощью полезной нагрузки отправленной с помощью строки запроса в burp = “GET / HTTP/1.1\r\n\r\n”, не дало Positive срабатываний
+    - ### <a name="_posha7mdig3d"></a>[CVE-2017-9798](https://www.cvedetails.com/cve/CVE-2017-9798/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_aslv9cd8ly7"></a>[CVE-2017-15710](https://www.cvedetails.com/cve/CVE-2017-15710/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_dn9zfdunksz2"></a>[CVE-2018-1303](https://www.cvedetails.com/cve/CVE-2018-1303/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_aimbif7vfs9i"></a>[CVE-2018-17199](https://www.cvedetails.com/cve/CVE-2018-17199/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_m1mksc11dp9y"></a>[CVE-2019-0217](https://www.cvedetails.com/cve/CVE-2019-0217/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания. нету заголовка WWW-Authenticate
+    - ### <a name="_24enwvcd8wt"></a>[CVE-2021-26690](https://www.cvedetails.com/cve/CVE-2021-26690/)
+        - Было проверено с помощью полезной нагрузки отправленной с помощью curl = “curl -H "Cookie: PHPSESSID=aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" <http://92.51.39.106:8060>”, не дало Positive срабатываний
+    - ### <a name="_xi02wu6lreg"></a>[CVE-2021-34798](https://www.cvedetails.com/cve/CVE-2021-34798/)
+        - Было проверено с помощью полезной нагрузки отправленной с помощью curl = “curl -H "X-Original-URL: max-age=0)"  <http://92.51.39.106:8060>”, не дало Positive срабатываний
+    - ### <a name="_ynuy3ehhc53f"></a>[CVE-2022-22719](https://www.cvedetails.com/cve/CVE-2022-22719/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_yi6ljllu6cqt"></a>[CVE-2022-26377](https://www.cvedetails.com/cve/CVE-2022-26377/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_a0x7c7ea4bsn"></a>[CVE-2022-29404](https://www.cvedetails.com/cve/CVE-2022-29404/)
+        - Было проверено с помощью полезной нагрузки отправленной как файл malicious.lua содержимое файла = “function r:parsebody(arg)
+
+          `    `return string.rep('A', 1024 \* 1024 \* 1024)
+
+          end
+
+          ”, не дало Positive срабатываний
+    - ### <a name="_vhry166czis"></a>[CVE-2022-30556](https://www.cvedetails.com/cve/CVE-2022-30556/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_7rwricjpl5g9"></a>[CVE-2023-31122](https://www.cvedetails.com/cve/CVE-2023-31122/)
+        - Было проверено с помощью полезной нагрузки отправленной в заголовке запроса = “GET /pictures/search.php?query=%28%28%28%28%28%28x%5B%5D%3D("")%29%29%29%29%29%29&x=54&y=3”, не дало Positive срабатываний
+    - ### <a name="_ckcx54835d44"></a>[CVE-2020-35452](https://www.cvedetails.com/cve/CVE-2020-35452/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_8k43hfxnhf05"></a>[CVE-2014-0226](https://www.cvedetails.com/cve/CVE-2014-0226/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_sreihmzgfjom"></a>[CVE-2016-4975](https://www.cvedetails.com/cve/CVE-2016-4975/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_8edlgasnol2p"></a>[CVE-2019-10092](https://www.cvedetails.com/cve/CVE-2019-10092/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_pyzots4nvxeg"></a>[CVE-2019-10098](https://www.cvedetails.com/cve/CVE-2019-10098/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_i9yip5o4qgtb"></a>[CVE-2020-1927](https://www.cvedetails.com/cve/CVE-2020-1927/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_lfv7ughr1khn"></a>[CVE-2018-1301](https://www.cvedetails.com/cve/CVE-2018-1301/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_ev8069du6d8a"></a>[CVE-2018-1302](https://www.cvedetails.com/cve/CVE-2018-1302/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_lhjxsua71bba"></a>[CVE-2023-45802](https://www.cvedetails.com/cve/CVE-2023-45802/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_saymzh6u8tzj"></a>[CVE-2020-13938](https://www.cvedetails.com/cve/CVE-2020-13938/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_j5tkitthrhj9"></a>[CVE-2018-1283](https://www.cvedetails.com/cve/CVE-2018-1283/)
+        - Было проверено с помощью полезной нагрузки отправленной в заголовке запроса в строке cookie = “Session=my\_custom\_value”, не дало Positive срабатываний
+    - ### <a name="_s1sfh8ll6bij"></a>[CVE-2019-0220](https://www.cvedetails.com/cve/CVE-2019-0220/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_qrmx2gvbayy2"></a>[CVE-2019-17567](https://www.cvedetails.com/cve/CVE-2019-17567/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+
+    - ### <a name="_g3tmg8zert4m"></a>[CVE-2020-1934](https://www.cvedetails.com/cve/CVE-2020-1934/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_amsmb4omw97l"></a>[CVE-2020-11985](https://www.cvedetails.com/cve/CVE-2020-11985/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_dt7g1bs7vs1u"></a>[CVE-2022-28330](https://www.cvedetails.com/cve/CVE-2022-28330/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_ktx6aznyd8da"></a>[CVE-2022-28614](https://www.cvedetails.com/cve/CVE-2022-28614/)
+        - Было проверено с помощью полезной нагрузки отправленной как файл malicious.lua содержимое файла = “r:puts(string.rep('A', 0x7FFFFFFF))”, не дало Positive срабатываний
+    - ### <a name="_s6ocb3t82vxp"></a>[CVE-2022-37436](https://www.cvedetails.com/cve/CVE-2022-37436/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_bb8bashnkcre"></a>[CVE-2013-5704](https://www.cvedetails.com/cve/CVE-2013-5704/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_q3rzmosou5en"></a>[CVE-2013-6438](https://www.cvedetails.com/cve/CVE-2013-6438/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_wlcj8liw5glb"></a>[CVE-2014-0098](https://www.cvedetails.com/cve/CVE-2014-0098/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_52r7xqgyfop"></a>[CVE-2014-0231](https://www.cvedetails.com/cve/CVE-2014-0231/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_egsd7f17ekww"></a>[CVE-2014-3523](https://www.cvedetails.com/cve/CVE-2014-3523/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_84cn5nbm9m0b"></a>[CVE-2014-3581](https://www.cvedetails.com/cve/CVE-2014-3581/)
+        - Было проверено с помощью полезной нагрузки отправленной с помощью curl = “curl -X PUT -H "Content-Length: 0" -H "Content-Type: " <http://92.51.39.106:8060/>” не дало Positive срабатываний
+    - ### <a name="_jtfwo5ft5kvn"></a>[CVE-2015-0228](https://www.cvedetails.com/cve/CVE-2015-0228/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_tj7aobwdrjhd"></a>[CVE-2015-3183](https://www.cvedetails.com/cve/CVE-2015-3183/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_2uedjyxdxti0"></a>[CVE-2014-0117](https://www.cvedetails.com/cve/CVE-2014-0117/)
+        - Было проверено с помощью полезной нагрузки отправленной в заголовке запроса = “Connection: close\x5c\x5c”, не дало Positive срабатываний
+    - ### <a name="_su1ezw3nkulf"></a>[CVE-2014-0118](https://www.cvedetails.com/cve/CVE-2014-0118/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_5ghst1lrofj4"></a>[CVE-2014-8109](https://www.cvedetails.com/cve/CVE-2014-8109/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_f8t1fh2qgsqd"></a>[CVE-2015-3185](https://www.cvedetails.com/cve/CVE-2015-3185/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_ec74t5nsx5zy"></a>[CVE-2016-8612](https://www.cvedetails.com/cve/CVE-2016-8612/)
+        - Было проверено с помощью полезной нагрузки отправленной с помощью curl = “curl -v 92.51.39.106:8060 -H "X-Forwarded-For: invalid\_value"”, не дало Positive срабатываний
+    - ### <a name="_gfsvbk1au0rv"></a>[CVE-2023-38709](https://www.cvedetails.com/cve/CVE-2023-38709/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    - ### <a name="_8d8aijvs6w4g"></a>[CVE-2024-24795](https://www.cvedetails.com/cve/CVE-2024-24795/)
+        - Нет возможность провалидировать и проверить на False Positive срабатывания
+    ### <a name="_80mo47f9brpe"></a>
